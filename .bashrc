@@ -99,7 +99,7 @@ alias pacrmorphans='sudo pacman -Rs $(pacman -Qtdq)'
 #-------------------------------
 
 # Prompt
-source ~/dotfiles/extras/colors
+source ~/dotfiles/extras/colors_org
 FANCY="\342\226\270"
 #PS1="\[$Cyan\]\h: \[$Red\]\W \[$Yellow\]$FANCY \[$Color_Off\] "
 #PS1="\[\e[0;36m\]┌─\[\e[0;39m \u$FANCY\h \e[0;36m\]─ \[\e[1;31m\]\w\[\e[0;36m\]\[\e[0;36m\]\n\[\e[0;36m\]└──╼\[\e[0;34m\] \[\e[39m\]"
