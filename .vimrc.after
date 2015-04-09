@@ -1,0 +1,33 @@
+
+""""""
+"Custom Vim Settings -- Manjaro 2014
+"
+""""""
+
+
+"Color on - default theme
+set t_Co=256
+color molokai
+
+"Mouse control on
+set mouse=a
+
+""
+"Settings for vdiscover
+"Mapping F8 to open selected search result
+
+function! OpenCurrentLine ()
+  let line = getline (".")
+  let line = substitute(line, '^\(.*\)$', '"\1"', "g")
+  exec "!xdg-open" line '>&/dev/null &'
+endfunction
+
+map <F8> :call OpenCurrentLine() <CR><CR>
+
+
+"Auto Run programs 
+autocmd FileType python nnoremap <buffer> <F9> :exec '!python' shellescape(@%, 1)<CR>
+
+
+
+autocmd BufRead,BufNewFile *.as set filetype=as3

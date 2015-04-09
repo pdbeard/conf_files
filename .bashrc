@@ -23,11 +23,11 @@ shopt -s histappend       # Appends instead of overwrites old HISTFILE on shell 
 shopt -s hostcomplete
 shopt -s nocaseglob       # Case-insensitive file expansion. (Not working???)
 
-export HISTSIZE=1000
+export HISTSIZE=10000
 export HISTFILESIZE=${HISTSIZE}
-export HISTCONTROL=ignoreboth        # Remove Extra Commands
-export HISTCONTROL=erasedups         # Erase duplicates across the whole history
-export HISTTIMEFORMAT="%d/%m/%y %T " # History list shows digital time and date
+export HISTCONTROL=ignoreboth:erasedups     # Remove Extra Commands
+#export HISTCONTROL=erasedups                # Erase duplicates across the whole history
+export HISTTIMEFORMAT="%d/%m/%y %T "         # History list shows digital time and date
 #export HISTTIMEFORMAT="%h %d %H:%M:%S> "
 
 HISTCONTROL=ignorespace     # Space follow by a cmd,will not be saved in history
