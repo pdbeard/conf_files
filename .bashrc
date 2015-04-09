@@ -30,10 +30,10 @@ export HISTCONTROL=ignoreboth:erasedups     # Remove Extra Commands
 export HISTTIMEFORMAT="%d/%m/%y %T "         # History list shows digital time and date
 #export HISTTIMEFORMAT="%h %d %H:%M:%S> "
 
-HISTCONTROL=ignorespace     # Space follow by a cmd,will not be saved in history
-HISTCONTROL=ignoredups      # Rm Dupes, the continuous repeated entry from history
-HISTFILESIZE=3000           # Bash history size limit
-HISTSIZE=1000
+#HISTCONTROL=ignorespace     # Space follow by a cmd,will not be saved in history
+#HISTCONTROL=ignoredups      # Rm Dupes, the continuous repeated entry from history
+#HISTFILESIZE=3000           # Bash history size limit
+#HISTSIZE=1000
 
 
 # General
@@ -91,7 +91,7 @@ alias paclsorphans='sudo pacman -Qdt'
 alias pacrmorphans='sudo pacman -Rs $(pacman -Qtdq)'
 
 #PYTHON VIRTUAL ENVIRONMENT
-# ...
+# ...removed
 
 
 #-------------------------------
@@ -118,7 +118,7 @@ export LESS_TERMCAP_us=$'\E[01;32m'    # begin underline
 # Color Grep Search
 export GREP_COLORS='0;31'
 
-# Add Clock to terminal
+# Add Clock to terminal -- works but weird
 #while sleep 1
 #do tput sc
 #  tput cup 0 $(($(tput cols)-29))
@@ -188,7 +188,7 @@ cl() {
 
 # Search history for typed command
 myip() {
-  /sbin/ifconfig | grep "inet 156" #set for IU : normally would be 192
+  /sbin/ifconfig | grep "inet 156" #set for IU : ie localnet =  192
   curl ifconfig.me |sed -e 's/.*Current IP Address: //' -e 's/<.*$//'
 }
 
